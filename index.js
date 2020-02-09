@@ -14,7 +14,7 @@ document.getElementById('go').addEventListener('click', async (e) => {
         }
 
         await fetch(withoutQueries).then(r => r.text);
-        await waitFor(1.5);
+        await waitFor(0.8);
         console.log(count);
         count++;
     }
