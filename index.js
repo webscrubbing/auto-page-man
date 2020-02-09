@@ -5,7 +5,7 @@ document.getElementById('go').addEventListener('click', async (e) => {
     const urlObj = new URL(url);
     const withoutQueries = urlObj.origin + urlObj.pathname;
 
-    const tryCount = 3;
+    const tryCount = 4;
     let count = 0;
     while(true) {
         if (tryCount === count) {
