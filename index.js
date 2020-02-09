@@ -5,7 +5,7 @@ document.getElementById('go').addEventListener('click', async (e) => {
     const urlObj = new URL(url);
     const withoutQueries = urlObj.origin + urlObj.pathname;
 
-    const tryCount = 4;
+    const tryCount = 3;
     let count = 1;
     while(true) {
         if (tryCount === count) {
@@ -14,7 +14,7 @@ document.getElementById('go').addEventListener('click', async (e) => {
         }
 
         await fetch(withoutQueries).then(r => r.text);
-        await waitFor(1);
+        await waitFor(2);
         console.log(count);
         count++;
     }
