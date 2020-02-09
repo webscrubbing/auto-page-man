@@ -6,7 +6,7 @@ document.getElementById('go').addEventListener('click', async (e) => {
     const withoutQueries = urlObj.origin + urlObj.pathname;
 
     const tryCount = 3;
-    let count = 1;
+    let count = 0;
     while(true) {
         if (tryCount === count) {
             location.href = withoutQueries;
