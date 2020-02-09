@@ -9,12 +9,12 @@ document.getElementById('go').addEventListener('click', async (e) => {
     let count = 0;
     while(true) {
         if (tryCount === count) {
-            location.href = withoutQueries;
+            location.href = withoutQueries + '?chrome=1';
             break;
         }
 
         await fetch(withoutQueries).then(r => r.text);
-        await waitFor(2);
+        await waitFor(1.5);
         console.log(count);
         count++;
     }
